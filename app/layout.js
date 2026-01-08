@@ -16,7 +16,7 @@ export const metadata = {
   title: "The Cozy Corner",
   description: "A cozy online bookstore with hand-picked recommendations for every reader.",
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.ico',
   },
 };
 
