@@ -15,31 +15,45 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "The Cozy Corner",
   description: "A cozy online bookstore with great recommendations",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-50`}
-      >
-        <header className="border-b bg-white">
-          <div className="mx-auto max-w-6xl flex justify-between items-center p-4">
-            <h1 className="text-xl font-semibold">The Cozy Corner</h1>
-            <nav className="space-x-4 text-sm">
-              <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-              <Link href="/books">Books</Link>
-              <Link href="/contact">Contact</Link>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900`}>
+        
+        <div className="flex min-h-screen">
+          
+          <aside className="w-64 bg-slate-800 border-r border-indigo-500/20 p-6">
+            <h1 className="text-xl font-bold text-indigo-100 mb-8">The Cozy Corner</h1>
+            
+            <nav className="flex flex-col gap-3">
+              <Link href="/" className="text-slate-300 hover:text-indigo-300 hover:bg-slate-700 p-2 rounded">
+                Home
+              </Link>
+              <Link href="/about" className="text-slate-300 hover:text-indigo-300 hover:bg-slate-700 p-2 rounded">
+                About
+              </Link>
+              <Link href="/books" className="text-slate-300 hover:text-indigo-300 hover:bg-slate-700 p-2 rounded">
+                Books
+              </Link>
+              <Link href="/contact" className="text-slate-300 hover:text-indigo-300 hover:bg-slate-700 p-2 rounded">
+                Contact
+              </Link>
             </nav>
-          </div>
-        </header>
+            
+            <div className="mt-auto pt-8 text-xs text-slate-500">
+              © 2026 The Cozy Corner
+            </div>
+          </aside>
 
-        <main className="mx-auto max-w-6xl p-6">{children}</main>
-
-        <footer className="text-center text-sm text-zinc-500 py-6">
-          © 2026 The Cozy Corner
-        </footer>
+          <main className="flex-1 p-8">{children}</main>
+          
+        </div>
+        
       </body>
     </html>
   );

@@ -3,42 +3,53 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50">
-      <main className="flex w-full max-w-3xl flex-col items-center gap-10 py-24 px-10 bg-white rounded-lg shadow">
-        <Image
-          src="/images/book1.png"
-          alt="The Cozy Corner"
-          width={120}
-          height={160}
-          priority
-        />
+    <div className="min-h-screen bg-slate-900 py-16 px-6">
+      <div className="max-w-5xl mx-auto">
+        
+        <div className="flex items-center gap-8 mb-16">
+          <Image
+            src="/favicon.svg"
+            alt="The Cozy Corner"
+            width={140}
+            height={140}
+            priority
+            className="rounded shadow-lg"
+          />
+          <div>
+            <h1 className="text-4xl font-semibold text-indigo-200 mb-3">
+              Welcome to The Cozy Corner
+            </h1>
+            <p className="text-slate-300 text-lg">
+              A cozy online bookstore with hand-picked recommendations for every reader.
+            </p>
+          </div>
 
-        <div className="text-center">
-          <h1 className="text-3xl font-semibold tracking-tight">
-            Welcome to The Cozy Corner
-          </h1>
-          <p className="mt-4 text-zinc-600">
-            A cozy online bookstore with hand-picked recommendations for every
-            reader.
-          </p>
+          <Image
+          src="/images/kid.gif"
+          alt="Animation"
+          width={400}
+          height={400}
+          className="rounded"
+          />
+
         </div>
 
         <div className="flex gap-4">
           <Link
             href="/books"
-            className="flex h-12 items-center justify-center rounded-full bg-black px-6 text-white hover:bg-zinc-800"
+            className="bg-indigo-600 px-8 py-3 rounded text-white hover:bg-indigo-500"
           >
             Browse Books
           </Link>
-
           <Link
             href="/about"
-            className="flex h-12 items-center justify-center rounded-full border px-6 hover:bg-zinc-100"
+            className="border border-indigo-400 px-8 py-3 rounded text-indigo-200 hover:bg-slate-800"
           >
             Learn More
           </Link>
         </div>
-      </main>
+        
+      </div>
     </div>
   );
 }
