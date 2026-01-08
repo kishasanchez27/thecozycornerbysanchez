@@ -8,7 +8,7 @@ export default function Home() {
         
         <div className="flex items-center gap-8 mb-16">
           <Image
-            src="/favicon.svg"
+            src="/favicon.ico"
             alt="The Cozy Corner"
             width={140}
             height={140}
