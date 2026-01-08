@@ -13,7 +13,7 @@ export default function BooksPage() {
           <div className="space-y-3">
             <Image 
               src="/images/book1.png" 
-              alt="Book" 
+              alt="Modern CSS with Tailwind Book" 
               width={300} 
               height={400} 
               className="rounded shadow-lg"
@@ -26,7 +26,7 @@ export default function BooksPage() {
           <div className="space-y-3">
             <Image 
               src="/images/book2.png" 
-              alt="Book" 
+              alt="Next.js Handbook" 
               width={300} 
               height={400}
               className="rounded shadow-lg"
@@ -39,7 +39,7 @@ export default function BooksPage() {
           <div className="space-y-3">
             <Image 
               src="/images/book3.jpg" 
-              alt="Book" 
+              alt="Mindset Book" 
               width={300} 
               height={400}
               className="rounded shadow-lg"
